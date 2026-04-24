@@ -751,14 +751,13 @@ function FutureSlide({ data, slideNum }: { data: any; slideNum: string }) {
       <div className="grid grid-cols-3 gap-4">
         {data.directions.map((d: any, i: number) => (
           <div key={i} className="group border border-gray-100 rounded-xl p-4 hover:border-gray-300 hover:shadow-sm transition-all">
-            <div className="flex items-start justify-between mb-3">
+            <div className="mb-3">
               <div className="w-8 h-8 bg-gray-50 group-hover:bg-gray-100 rounded-lg transition-colors flex items-center justify-center">
                 <Icon name={d.icon} size={15} fallback="Star" />
               </div>
-              <span className="text-xs font-mono text-gray-300">{d.horizon}</span>
             </div>
             <h3 className="font-semibold text-gray-900 text-sm mb-2">{d.title}</h3>
-            <p className="text-xs text-gray-500 leading-relaxed">{d.text}</p>
+            <p className="text-sm text-gray-500 leading-relaxed">{d.text}</p>
           </div>
         ))}
       </div>
